@@ -30,8 +30,8 @@ stages:
             sfdx config:set restDeploy=false --global
         displayName: Use SOAP API for Deployment
       - bash:
-            sfdx force:auth:jwt:grant --clientid 3MVG9G9pzCUSkzZtnzxaz29KLNLs4Z1j.SpYGU__P.iugIKMWvC6KKZbUWrZ0Ax7oDfZ__etQmgbGKNZV6xK5 --jwtkeyfile ./bin/server.key --username abhirupsengupta20@gmail.com --instanceurl https://login.salesforce.com
+            sfdx force:auth:jwt:grant --clientid 3MVG9Xl3BC6VHB.ZLc7TjvhE6Z9_7iaGQxfMSXUTGoLDWVrEEOso7Ms4ScF_yxwCHRyz8QMtuJg.4tT5Vieow --jwtkeyfile server.key --username chinmay@uciny.com --instanceurl https://login.salesforce.com
         displayName: Authorize Salesforce DeployTestOrg Org
       - bash:
-            sfdx force:source:deploy -p force-app -w 10 -u abhirupsengupta20@gmail.com
+            sfdx force:source:deploy -p force-app -w 10 -u chinmay@ucinydevorg.com
         displayName: Deploy source code to DeployTestOrg Org
