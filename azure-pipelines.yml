@@ -7,15 +7,18 @@ pr:
   autoCancel: "true"
   branches:
     include:
-    - Test
-    - main
+    - master
+    - dev
+    - qa
+    - uat
+    - preprod
   paths:
     exclude:
     - README.md
     - azure-pipelines.yml
 stages:
 - stage: TestSalesforceOrg
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/Test'))
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
   jobs:
   - job: DeployTestOrg
     steps:
