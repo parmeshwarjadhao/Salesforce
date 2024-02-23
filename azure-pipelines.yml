@@ -16,6 +16,10 @@ steps:
     checkLatest: true
 
 - script: |
-   npm install @salesforce/cli -- global
-  displayName: Install Salesforce CLI (new)
+    sudo apt install node
+    node --version
+    npm install @salesforce/cli -- global
+    displayName: Install Salesforce CLI (new)
+    npm install sfdx-cli — global
+    sfdx --version
 
