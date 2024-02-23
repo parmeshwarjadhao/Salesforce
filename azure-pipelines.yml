@@ -1,23 +1,21 @@
+trigger :
+  -none
+
+pool:
+  vmImage : ubuntu-latest
+
 steps:
-- checkout: self
-  fetchDepth: 0
+
+- script: |
+      sudo apt update
+      apt show openssl
+      sudo apt install openssl -y
+      openssl version
+
 - task: UseNode@1
   inputs:
     checkLatest: true
 
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo Write your commands here
-      
-      echo Hello world
-
 - script: |
    npm install -- global @salesforce/cli
    displayName: Install Salesforce CLI (new)
-     
-- task: DownloadSecureFile@1
-  name: opensslCertificate
-  displayName: 'Download OpenSSL Certificate
-     inputs:
-     secureFile: 'server.key'
