@@ -18,8 +18,10 @@ steps:
 - script: |
     sudo apt install node
     node --version
-    npm uninstall @salesforce/cli -- global
+    npm install --save-dev @babel/plugin-proposal-class-properties
     npm cache clean --force
+    npm uninstall -g react-native-cli
+    npx create-react-app slaesforceADO
     npm cache verify
     npm install --global @salesforce/cli@latest-rc
     displayName: Install Salesforce CLI (new)
