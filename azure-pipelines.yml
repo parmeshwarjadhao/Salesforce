@@ -1,40 +1,23 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+steps:
+- checkout: self
+  fetchDepth: 0
+- task: UseNode@1
+  inputs:
+    checkLatest: true
 
-pr:
-  autoCancel: "true"
-  branches:
-    include:
-    - master
-    - dev
-    - qa
-    - uat
-    - preprod
-  paths:
-    exclude:
-    - README.md
-    - azure-pipelines.yml
-stages:
-- stage: TestSalesforceOrg
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
-  jobs:
-  - job: DeployTestOrg
-    steps:
-      - task: NodeTool@0
-        inputs:
-          versionSpec: '14.x'
-          checkLatest: true
-      - bash: 
-          npm install sfdx-cli --global
-        displayName: Install Salesforce CLI
-      - bash:
-            sfdx config:set restDeploy=false --global
-        displayName: Use SOAP API for Deployment
-      - bash:
-            sfdx force:auth:jwt:grant --clientid 3MVG9Xl3BC6VHB.ZLc7TjvhE6Z9_7iaGQxfMSXUTGoLDWVrEEOso7Ms4ScF_yxwCHRyz8QMtuJg.4tT5Vieow --jwtkeyfile server.key --username chinmay@uciny.com --instanceurl https://login.salesforce.com
-        displayName: Authorize Salesforce DeployTestOrg Org
-      - bash:
-            sfdx force:source:deploy -p force-app -w 10 -u chinmay@ucinydevorg.com
-        displayName: Deploy source code to DeployTestOrg Org
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo Write your commands here
+      
+      echo Hello world
+
+- script: |
+   npm install -- global @salesforce/cli
+   displayName: Install Salesforce CLI (new)
+     
+- task: DownloadSecureFile@1
+  name: opensslCertificate
+  displayName: 'Download OpenSSL Certificate
+     inputs:
+     secureFile: 'server.key'
