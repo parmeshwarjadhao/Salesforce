@@ -16,11 +16,6 @@ steps:
     checkLatest: true
 
 - script: |
-   node --version
-   npm install @salesforce/cli --global
+   npm install @salesforce/cli -- global
   displayName: Install Salesforce CLI (new)
-
-- task: DownloadSecureFile@1
-  name: opensslCertificate
-  displayName: Download OpenSSL Certificate
 
