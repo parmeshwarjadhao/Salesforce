@@ -16,5 +16,5 @@ steps:
     checkLatest: true
 
 - script: |
-   npm install -- global @salesforce/cli
+   npm install --global @salesforce/cli
    displayName: Install Salesforce CLI (new)
