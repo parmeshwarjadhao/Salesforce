@@ -21,7 +21,7 @@ steps:
     npm uninstall @salesforce/cli -- global
     npm cache clean --force
     npm cache verify
-    npm install @salesforce/cli -- global
+    npm install --global @salesforce/cli@latest-rc
     displayName: Install Salesforce CLI (new)
     npm install sfdx-cli — global
     sfdx --version
