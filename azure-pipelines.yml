@@ -32,6 +32,8 @@ steps:
    ls
    echo 'OpenSSL path'
    cd /home/vsts/work/_temp/openssl
+   echo 'current directory'
+   pwd
    ls
 #- script: |
   # npm install -- global @salesforce/cli
