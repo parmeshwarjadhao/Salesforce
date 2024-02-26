@@ -11,15 +11,15 @@ steps:
       sudo apt install openssl -y
       openssl version
 
-- task: UseNode@1
-  inputs:
-    checkLatest: true
+#- task: UseNode@1
+#  inputs:
+#    checkLatest: true
 
 - script:  |
    cd /usr/local/ssl
    ls 
-   sudo find / -name openssl
+   sudo find / -name usr/bin/openssl
 
-- script: |
-   npm install -- global @salesforce/cli
-   echo 'sf cli installed'
+#- script: |
+  # npm install -- global @salesforce/cli
+  # echo 'sf cli installed'
