@@ -9,6 +9,8 @@ steps:
       sudo apt update
       apt show openssl
       sudo apt install openssl -y
+      sudo apt-get install libssl-dev
+      ls
       openssl version
 
 #- task: UseNode@1
@@ -16,9 +18,12 @@ steps:
 #    checkLatest: true
 
 - script:  |
-   cd /usr/local/ssl
-   ls 
-   sudo find / -name usr/bin/openssl
+   cd /home/vsts/work/1/s
+   ls
+   cd /home/vsts/work
+   ls
+   cd /home/vsts/work
+   ls
 
 #- script: |
   # npm install -- global @salesforce/cli
