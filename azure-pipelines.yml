@@ -15,6 +15,10 @@ steps:
   inputs:
     checkLatest: true
 
+- script:  |
+   cd /usr/local/ssl
+   ls 
+   sudo find / -name openssl
 
 - script: |
    npm install -- global @salesforce/cli
