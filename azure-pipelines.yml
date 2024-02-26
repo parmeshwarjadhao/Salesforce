@@ -30,6 +30,9 @@ steps:
    ls
    cd /usr/local
    ls
+   echo 'OpenSSL path'
+   cd /home/vsts/work/_temp/openssl
+   ls
 #- script: |
   # npm install -- global @salesforce/cli
   # echo 'sf cli installed'
