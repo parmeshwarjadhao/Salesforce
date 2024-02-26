@@ -31,7 +31,7 @@ steps:
    cd /usr/local
    ls
    echo 'OpenSSL path'
-   cd /home/vsts/work/_temp/openssl
+   cd /home/vsts/work/_temp
    echo 'current directory'
    pwd
    ls
