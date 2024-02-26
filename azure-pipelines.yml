@@ -18,7 +18,8 @@ steps:
 #    checkLatest: true
 
 - script:  |
-   cd /home/vsts/work/1/s
+   echo 'openssl-path'
+   cd /home/vsts/work/openssl
    ls
    cd /home/vsts/work
    ls
