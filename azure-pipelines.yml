@@ -17,6 +17,9 @@ steps:
 
 - script: |
     node --version
+    npm install npm@latest -g
+    node --version
     npm install -g npm@latest
+    npm install @salesforce/cli --global
     npm install @salesforce/cli --global
 
