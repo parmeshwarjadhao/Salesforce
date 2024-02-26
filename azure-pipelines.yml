@@ -22,17 +22,27 @@ steps:
    ls
    cd /home/vsts/work
    ls
-   cd /home/vsts/work
-   ls
+
    cd /usr/bin/openssl
    ls
+   echo '1current directory'
+   pwd
    cd /usr/bin
    ls
+   echo '2current directory'
+   pwd
    cd /usr/local
+   echo '3current directory'
+   pwd
+
+   cd /home/
+   echo '4current directory'
+   pwd
    ls
+
    echo 'OpenSSL path'
    cd /home/vsts/work/_temp
-   echo 'current directory'
+   echo '5current directory'
    pwd
    ls
 #- script: |
