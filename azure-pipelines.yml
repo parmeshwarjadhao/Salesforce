@@ -24,7 +24,12 @@ steps:
    ls
    cd /home/vsts/work
    ls
-
+   cd /usr/bin/openssl
+   ls
+   cd /usr/bin
+   ls
+   cd /usr/local
+   ls
 #- script: |
   # npm install -- global @salesforce/cli
   # echo 'sf cli installed'
