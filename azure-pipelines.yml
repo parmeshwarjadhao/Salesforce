@@ -18,6 +18,7 @@ steps:
 
 - script:  |
    echo 'openssl-path'
+   echo '0 current directory'
    cd /home/vsts/work/openssl
    ls
    cd /home/vsts/work
@@ -29,6 +30,7 @@ steps:
    pwd
    cd /usr/bin
    ls
+   
    echo '2current directory'
    pwd
    cd /usr/local
