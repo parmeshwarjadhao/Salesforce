@@ -17,10 +17,10 @@ steps:
 
 - script: |
     node --version
-    node -v
-    nvm install v13.10.0
-    nvm uninstall v9.2.0
-    nvm install v9.2.0
-    nvm uninstall v13.10.0
+    sudo apt-get install nodejs
+    sudo apt-get install npm
+    nodejs --version
+    sudo npm cache clean -f
+    sudo npm install -g n
     npm install -g npm@latest
     npm install @salesforce/cli --global
