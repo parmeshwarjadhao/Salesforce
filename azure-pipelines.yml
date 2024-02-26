@@ -17,11 +17,10 @@ steps:
 
 - script: |
     node --version
-    sudo mkdir -p /usr/local/lib/nodejs
-    sudo tar -xJvf node-v14.4.0-linux-x64.tar.xz -C /usr/local/lib/nodejs
-
-    export PATH=/usr/local/lib/nodejs/node-node-v14.4.0-linux-x64/bin:$PATH
-    npm install npm@latest -g
-    node --version
+    node -v
+    nvm install v13.10.0
+    nvm uninstall v9.2.0
+    nvm install v9.2.0
+    nvm uninstall v13.10.0
     npm install -g npm@latest
     npm install @salesforce/cli --global
