@@ -25,7 +25,7 @@ steps:
    ls
    ls -l openssl
    echo '2current directory'
-   sudo -R chmod 777 /usr/bin/openssl
+   sudo -R chmod 755 /usr/bin/openssl
    ls
 
    
