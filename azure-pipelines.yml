@@ -17,13 +17,6 @@ steps:
 #    checkLatest: true
 
 - script:  |
-   echo 'openssl-path'
-   echo '0 current directory'
-   cd /home/vsts/work/openssl
-   ls
-   cd /home/vsts/work
-   ls
-
    cd /usr/bin/openssl
    ls
    echo '1current directory'
@@ -31,7 +24,7 @@ steps:
    cd /usr/bin
    ls
    ls -l openssl
-   
+   echo '2current directory'
    chmod 775 /usr/bin/openssl
    ls
 
