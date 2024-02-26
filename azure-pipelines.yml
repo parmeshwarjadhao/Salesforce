@@ -30,23 +30,12 @@ steps:
    pwd
    cd /usr/bin
    ls
+   ls -l openssl
    
-   echo '2current directory'
-   pwd
-   cd /usr/local
-   echo '3current directory'
-   pwd
-
-   cd /home/
-   echo '4current directory'
-   pwd
+   chmod 775 /usr/bin/openssl
    ls
 
-   echo 'OpenSSL path'
-   cd /home/vsts/work/_temp
-   echo '5current directory'
-   pwd
-   ls
+   
 #- script: |
   # npm install -- global @salesforce/cli
   # echo 'sf cli installed'
